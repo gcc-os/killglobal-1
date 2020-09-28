@@ -11,6 +11,7 @@ kill global variable in project
 ##### 使用:
 
 * page1/index.js
+
 ``
   import killglobal from "killglobal";
   const WX = killglobal.wx; // 获取微信版的实例
@@ -27,6 +28,7 @@ kill global variable in project
   Page(_page);
 ``
 * page2/index.js
+
 ``
   import killglobal from "killglobal";
   const WX = killglobal.wx;

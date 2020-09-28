@@ -56,9 +56,9 @@ kill global variable in project
     data:{},
     bindTap(){
       let _params = {moreData:{a:1,b:2}};
-      WX.router.navigateBack(1).withKGData(_params);
-      // WX.router.redirectTo("/pages/page1/index").withKGData(_params);
-      // WX.router.reLaunch("/pages/page1/index").withKGData(_params);
+      WX.router.navigateBack(1).withKGData(_params); // 返回
+      // WX.router.redirectTo("/pages/page1/index").withKGData(_params); // 重定向
+      // WX.router.reLaunch("/pages/page1/index").withKGData(_params); // 重启
     },
   });
   Page(_page);

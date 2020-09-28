@@ -74,3 +74,25 @@ kill global variable in project
   });
   Page(_page);
 ```
+---
+#### 您也可以使用别名来调用函数。
+
+** navigateTo——下一页：
+
+```
+  1. navigateTo(path)
+  2. goto(path)
+  3. push(path)
+```
+** navigateBack——返回：
+
+```
+  1. navigateBack(delta)
+  2. back(delta)
+```
+** redirectTo——重定向：
+
+```
+  1. redirectTo(path)
+  2. redirect(path)
+```

@@ -21,8 +21,8 @@ kill global variable in project
     bindTap(){ // 监听点击事件，跳转到page2
       let _options = {order_id:'1223',product_id:'1099'};
       let _largeData = {name:'koman',age:'99',address:'shanghai'};
-      let _type = "page1 to page2";
-      WX.router.navigateTo('/pages/page2/index', _options).withKGData(_largeData, _type);
+      let _from = "page1";
+      WX.router.navigateTo('/pages/page2/index', _options).withKGData(_largeData, _from);
     },
   });
   Page(_page);
@@ -34,9 +34,9 @@ kill global variable in project
   const WX = killglobal.wx;
   const _page = WX.page({
     data:{},
-    onKGData(data,type){
+    onKGData(data,from){
       console.log(data) // {name:'koman',age:'99',address:'shanghai'}
-      console.log(type) // "page1 to page2"
+      console.log(from) // "page1"
     },
     onLoad(options){
       console.log(options) // {order_id:'1223',product_id:'1099'}

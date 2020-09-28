@@ -4,11 +4,11 @@ kill global variable in project
 # 创作目地
 
 # Useage - 使用说明
-##### 使用npm安装:
+#### 使用npm安装:
 ``
   $ npm install killglobal
 ``
-##### 使用1 navigateTo:
+#### 使用1 navigateTo:
 
 * page1/index.js
 
@@ -56,7 +56,7 @@ kill global variable in project
     data:{},
     bindTap(){
       let _params = {moreData:{a:1,b:2}};
-      WX.router.navigateBack(2).withKGData(_params);
+      WX.router.navigateBack(1).withKGData(_params);
       // WX.router.redirectTo("/pages/page1/index", {order:123}).withKGData(_params);
       // WX.router.reLaunch("/pages/page1/index").withKGData(_params);
     },

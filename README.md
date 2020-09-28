@@ -8,7 +8,7 @@ kill global variable in project
 ``
   $ npm install killglobal
 ``
-#### 使用1 navigateTo:
+#### 使用： navigateTo
 
 * page1/index.js
 
@@ -45,7 +45,7 @@ kill global variable in project
   });
   Page(_page);
 ```
-#### navigateBack、redirectTo、reLaunch都可以传值
+#### 使用2： navigateBack、redirectTo、reLaunch都可以传值
 
 * page2/index.js
 

@@ -57,7 +57,7 @@ kill global variable in project
     bindTap(){
       let _params = {moreData:{a:1,b:2}};
       WX.router.navigateBack(1).withKGData(_params);
-      // WX.router.redirectTo("/pages/page1/index", {order:123}).withKGData(_params);
+      // WX.router.redirectTo("/pages/page1/index").withKGData(_params);
       // WX.router.reLaunch("/pages/page1/index").withKGData(_params);
     },
   });

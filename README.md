@@ -8,7 +8,7 @@ kill global variable in project
 ``
   $ npm install killglobal
 ``
-##### 使用:
+##### 使用1 navigateTo:
 
 * page1/index.js
 
@@ -42,6 +42,37 @@ kill global variable in project
       console.log(options) // {order_id:'1223',product_id:'1099'}
     },
 
+  });
+  Page(_page);
+```
+#### navigateBack、redirectTo、reLaunch都可以传值
+
+* page2/index.js
+
+```
+  import killglobal from "killglobal";
+  const WX = killglobal.wx;
+  const _page = WX.page({
+    data:{},
+    bindTap(){
+      let _params = {moreData:{a:1,b:2}};
+      WX.router.navigateBack(2).withKGData(_params);
+      // WX.router.redirectTo("/pages/page1/index", {order:123}).withKGData(_params);
+      // WX.router.reLaunch("/pages/page1/index").withKGData(_params);
+    },
+  });
+  Page(_page);
+```
+* page1/index.js
+
+```
+  import killglobal from "killglobal";
+  const WX = killglobal.wx; // 获取微信版的实例
+  const _page = WX.page({
+    data:{},
+    onKGData(data){
+      console.log(data) // {moreData:{a:1,b:2}};
+    },
   });
   Page(_page);
 ```

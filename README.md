@@ -8,7 +8,7 @@ kill global variable in project
 ``
   $ npm install killglobal
 ``
-#### 使用： navigateTo
+#### 使用1： navigateTo
 
 * page1/index.js
 

@@ -45,7 +45,7 @@ kill global variable in project
   });
   Page(_page);
 ```
-#### 使用2： navigateBack、redirectTo、reLaunch都可以传值
+#### 使用2： navigateBack、redirectTo、reLaunch的传值
 
 * page2/index.js
 

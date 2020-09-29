@@ -11,8 +11,8 @@ kill global variable in project
 * page1/index.js
 
 ```
-  import killglobal from "killglobal";
-  const WX = killglobal.wx; // 获取微信版的实例
+  import { getKGWechat } from "killglobal";
+  const WX = getKGWechat(); // 获取微信版的实例
   const _page = WX.page({
     data:{},
     onLoad(){},
@@ -28,8 +28,8 @@ kill global variable in project
 * page2/index.js
 
 ```
-  import killglobal from "killglobal";
-  const WX = killglobal.wx;
+  import { getKGWechat } from "killglobal";
+  const WX = getKGWechat(); // 获取微信版的实例
   const _page = WX.page({
     data:{},
     onKGData(data,from){
@@ -48,8 +48,8 @@ kill global variable in project
 * page2/index.js
 
 ```
-  import killglobal from "killglobal";
-  const WX = killglobal.wx;
+  import { getKGWechat } from "killglobal";
+  const WX = getKGWechat(); // 获取微信版的实例
   const _page = WX.page({
     data:{},
     bindTap(){
@@ -64,8 +64,8 @@ kill global variable in project
 * page1/index.js
 
 ```
-  import killglobal from "killglobal";
-  const WX = killglobal.wx; // 获取微信版的实例
+  import { getKGWechat } from "killglobal";
+  const WX = getKGWechat(); // 获取微信版的实例
   const _page = WX.page({
     data:{},
     onKGData(data){

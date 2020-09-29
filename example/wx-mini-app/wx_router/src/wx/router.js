@@ -1,7 +1,8 @@
 // Richie Guo 2020-09-16
 // 编码参数格式 {a:1,b:2,c:3} => ?a=1&b=2&c=3 用于url传参
 
-import {
+import LIB from '../lib/index';
+const {
     KillGlobal_EncodeParams,
     KG_GetUniqueCode,
     KG_TYPE_BACK, // 返回
@@ -16,7 +17,7 @@ import {
     KG_TranslateData,
     KG_InsertKeyToParams,
     KG_DefineReadOnlyProperty,
-} from '../lib/index';
+} = LIB;
 let _share_wx_router = null;
 
 function _WX_KGRouter() {

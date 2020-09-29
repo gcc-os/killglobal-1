@@ -1,7 +1,8 @@
-const _wx = require("./src/wx/index").default;
+const _wx = null;
 
+import KGWX from "./src/wx";
 export default {
-    get wx() { // 获取微信实例
-        return _wx;
-    },
+    getKGWechat() {
+        return KGWXRouter.shareInstace();
+    }
 }

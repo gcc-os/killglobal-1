@@ -1,7 +1,6 @@
 import KGWX from "./src/wx/index";
 import KGNotificationCenter from "./src/notificationCenter/index";
 let _wx = null;
-
 export function getKGWechat() {
     if (!_wx) {
         _wx = {};

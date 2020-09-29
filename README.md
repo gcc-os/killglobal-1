@@ -6,7 +6,7 @@ kill global variable in project
 ``
   $ npm install killglobal
 ``
-#### 使用1： navigateTo
+#### 使用1： wx.navigateTo
 
 * page1/index.js
 
@@ -43,7 +43,7 @@ kill global variable in project
   });
   Page(_page);
 ```
-#### 使用2： navigateBack、redirectTo、reLaunch的传值
+#### 使用2： wx.navigateBack、wx.redirectTo、wx.reLaunch的传值
 
 * page2/index.js
 

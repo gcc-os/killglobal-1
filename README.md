@@ -96,3 +96,22 @@ redirectTo——重定向：
   1. redirectTo(path)
   2. redirect(path)
 ```
+
+## 将其引入app中快速使用
+
+app.js
+
+```
+import { getKGWechat } from 'killglobal';
+
+App({
+    get kgrouter() {
+        return getKGWechat().router;
+    },
+    get kgpage() {
+        return getKGWechat().page;
+    },
+    onLaunch: function() {},
+    globalData: {},
+   })
+```

@@ -1,6 +1,5 @@
 //app.js
 import { getKGWechat } from 'killglobal';
-console.log("getKGWechat", getKGWechat);
 
 App({
     get kgrouter() {

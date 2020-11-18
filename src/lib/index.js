@@ -45,7 +45,7 @@ function KillGlobal_DeepCopy(data) { // *对象深拷贝
             for (let key = 0; key < data.length; key++) {
                 let val = data[key];
                 if (typeof val == 'object') {
-                    _data[key] = DeepCopy(val);
+                    _data[key] = KillGlobal_DeepCopy(val);
                     continue;
                 }
                 _data[key] = val;
@@ -55,7 +55,7 @@ function KillGlobal_DeepCopy(data) { // *对象深拷贝
         for (let key in data) {
             let val = data[key];
             if (typeof val == 'object') {
-                _data[key] = DeepCopy(val);
+                _data[key] = KillGlobal_DeepCopy(val);
                 continue;
             }
             _data[key] = val;

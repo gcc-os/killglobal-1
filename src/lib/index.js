@@ -146,4 +146,5 @@ export default {
     KG_SetDataPool,
     KG_TranslateData,
     KG_InsertKeyToParams,
+    KG_DefineReadOnlyProperty
 }

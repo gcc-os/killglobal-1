@@ -31,7 +31,13 @@ function KillGlobal_EncodeParams(params, url) { // *url可选，非必传
 function KillGlobal_DeepCopy(data) { // *对象深拷贝
     if (!data) return '';
     if (typeof data != 'object') return data;
-    if (Object.keys(data).length == 0) return data;
+    if (Object.keys(data).length == 0) {
+        if (Array.isArray(data)) { // 如果是空数组，返回新的空数组对象
+            return [];
+        } else { // 如果是对象，返回空的对象
+            return {};
+        }
+    }
     let _data = {};
     if (Array.isArray(data)) { // 如果是数组
         _data = [];
@@ -59,7 +65,7 @@ function KillGlobal_DeepCopy(data) { // *对象深拷贝
 }
 
 function KG_GetUniqueCode() { // 获取唯的编码
-    return `_data_pool_key_${parseInt(Math.random()*1000000)}`;
+    return `_data_pool_key_${parseInt(Math.random() * 1000000)}`;
 }
 
 function KG_SetDataPool(data, key) { // 将数据放入数据池
@@ -77,7 +83,7 @@ function KG_TranslateData(options_key, page = '', type) { // 传输数据的对�
     this.translateCode = options_key || KG_NUL_VALUE;
     // *@param data: 数据
     // *@param tag: 标识 可选,一个page的onKGData可能会被很多page调用，这个tag用来标示数据来源
-    this.withKGData = function(data, tag = '') { // 存储数据/传数据
+    this.withKGData = function (data, tag = '') { // 存储数据/传数据
         const _data = KillGlobal_DeepCopy(data) // 拷贝data，防止互相干扰
         if (this.targetPage && this.targetPage.onKGData) {
             // 如果知道page，直接将数据传过去
@@ -89,7 +95,7 @@ function KG_TranslateData(options_key, page = '', type) { // 传输数据的对�
     }
 }
 
-const KG_InsertKeyToParams = function(params, type) { // 向params中插入参数
+const KG_InsertKeyToParams = function (params, type) { // 向params中插入参数
     let _params = {};
     if (params && Object.keys(params).length > 0) {
         _params = Object.assign(_params, params);
